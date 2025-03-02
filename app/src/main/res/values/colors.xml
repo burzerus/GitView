@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="bar_background">#161B22</color>
+    <color name="main_background">#0D1117</color>
+
+    <color name="green_button">#5A9357</color>
+
+    <color name="name_repos">#58A6FF</color>
+
+
+
+    <color name="colorPrimary">#161B22</color> <!-- Цвет ActionBar -->
+    <color name="colorPrimaryDark">#161B22</color> <!-- Темный оттенок для верхней панели -->
+
+
+</resources>

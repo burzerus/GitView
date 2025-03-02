@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GitView" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- Изменение цвета текста ActionBar -->
+        <item name="android:textColorPrimary">@android:color/white</item> <!-- Белый текст заголовка -->
+
+        <item name="android:statusBarColor" >@color/bar_background</item>
+        <item name="android:navigationBarColor">@color/bar_background</item>
+
+
+
+    </style>
+
+    <style name="Theme.GitView" parent="Base.Theme.GitView" />
+</resources>
+
