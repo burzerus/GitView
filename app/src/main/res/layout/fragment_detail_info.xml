@@ -15,15 +15,58 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
-        android:textColor="@color/name_repos"
         android:text="Repository URL"
-        android:textSize="16dp"
+        android:textColor="@color/name_repos"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Блок со статистикой: Stars, Forks, Watchers -->
 
 
-    android:clickable="true"
-    android:focusable="true"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/repoStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/repoUrl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/starsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="⭐ 0"
+            android:textColor="@color/name_repos"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/forksCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="🍴 0"
+            android:textColor="@color/name_repos"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/watchersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="👀 0"
+            android:textColor="@color/name_repos"
+            android:textSize="16sp"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

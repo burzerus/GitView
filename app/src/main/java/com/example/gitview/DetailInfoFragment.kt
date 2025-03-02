@@ -28,11 +28,19 @@ class DetailInfoFragment : Fragment(R.layout.fragment_detail_info) {
 
         val repoName = arguments?.getString("repoName")
         val repoUrl = arguments?.getString("repoUrl")
+        val repoStars = arguments?.getInt("repoStars") ?: 0
+        val repoForks = arguments?.getInt("repoForks") ?: 0
+        val repoWatchers = arguments?.getInt("repoWatchers") ?: 0
 
         // Устанавливаем название Toolbar
         (activity as? AppCompatActivity)?.supportActionBar?.title = repoName ?: "Repository"
 
         binding.repoUrl.text = repoUrl ?: "Нет ссылки"
+
+        // Обновляем статистику (каждый элемент отдельно)
+        binding.starsCount.text = "⭐ $repoStars"
+        binding.forksCount.text = "🍴 $repoForks"
+        binding.watchersCount.text = "👀 $repoWatchers"
 
         // Делаем ссылку кликабельной
         binding.repoUrl.setOnClickListener {

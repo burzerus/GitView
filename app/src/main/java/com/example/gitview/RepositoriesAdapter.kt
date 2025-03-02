@@ -1,10 +1,12 @@
 package com.example.gitview
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.findNavController
 import com.example.gitview.databinding.ItemRepositoryBinding
 
 class RepositoriesAdapter(private val onItemClick: (Repository) -> Unit) :
@@ -26,7 +28,9 @@ class RepositoriesAdapter(private val onItemClick: (Repository) -> Unit) :
             binding.repoDescription.text = repository.description ?: "No description"
             binding.repoLanguage.text = repository.language ?: "N/A"
 
-            // Передаем объект в Fragment
+            // Обновление статистики
+            binding.repoStats.text = "⭐ ${repository.stargazers_count}   🍴 ${repository.forks_count}   👀 ${repository.watchers_count}"
+
             itemView.setOnClickListener {
                 onItemClick(repository)
             }

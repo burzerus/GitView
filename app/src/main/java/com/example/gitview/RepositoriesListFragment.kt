@@ -32,6 +32,8 @@ class RepositoriesListFragment : Fragment(R.layout.fragment_repositories_list) {
         // Настройка RecyclerView
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
+
+        // Инициализация адаптера с передачей коллбэка
         adapter = RepositoriesAdapter { repo ->
             // Когда кликнули на репозиторий, передаем данные в DetailInfoFragment
             val bundle = Bundle().apply {
@@ -39,9 +41,13 @@ class RepositoriesListFragment : Fragment(R.layout.fragment_repositories_list) {
                 putString("repoDescription", repo.description)
                 putString("repoLanguage", repo.language)
                 putString("repoUrl", repo.html_url)
+                putInt("repoStars", repo.stargazers_count)
+                putInt("repoForks", repo.forks_count)
+                putInt("repoWatchers", repo.watchers_count)
             }
             findNavController().navigate(R.id.action_repositoriesListFragment_to_detailInfoFragment, bundle)
         }
+
         recyclerView.adapter = adapter
 
         // Получаем токен
@@ -51,7 +57,7 @@ class RepositoriesListFragment : Fragment(R.layout.fragment_repositories_list) {
             lifecycleScope.launch {
                 try {
                     val repos = RetrofitClient.instance.getRepositories("token $token")
-                    adapter.submitList(repos)
+                    adapter.submitList(repos)  // Обновляем данные адаптера
                 } catch (e: Exception) {
                     e.printStackTrace()
                     Toast.makeText(context, "Ошибка загрузки репозиториев", Toast.LENGTH_SHORT).show()
@@ -80,3 +86,4 @@ class RepositoriesListFragment : Fragment(R.layout.fragment_repositories_list) {
         }
     }
 }
+
