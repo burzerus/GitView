@@ -16,12 +16,12 @@
         android:text="Repository Name"
         android:fontFamily="@font/roboto_regular"
         android:textSize="16sp"
-    android:textColor="@color/name_repos"
-    android:layout_marginTop="14dp"
-    android:layout_marginStart="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toStartOf="@id/repoLanguage" />
+        android:textColor="@color/name_repos"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/repoLanguage" />
 
     <!-- Язык репозитория (repoLanguage) -->
     <TextView
@@ -30,13 +30,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:textSize="12sp"
-    android:text="Language"
-    android:textColor="@color/white"
-    android:layout_marginTop="14dp"
-    android:layout_marginEnd="16dp"
-    app:layout_constraintStart_toEndOf="@id/repoName"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent" />
+        android:text="Language"
+        android:textColor="@color/white"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/repoName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Описание репозитория (repoDescription) -->
     <TextView
@@ -45,13 +45,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:textSize="14sp"
-    android:text="Repository Description"
-    android:textColor="@color/white"
-    android:layout_marginStart="16dp"
-    android:layout_marginBottom="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/repoName"
-    app:layout_constraintEnd_toEndOf="parent" />
+        android:text="Repository Description"
+        android:textColor="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repoName"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Статистика репозитория (repoStats) -->
     <TextView
@@ -60,9 +60,20 @@
         android:layout_height="wrap_content"
         android:text="⭐ 0   🍴 0   👀 0"
         android:textSize="14sp"
-    android:textColor="@android:color/darker_gray"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/repoDescription"
-    app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repoDescription"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Контент README.md (repoReadmeContent) -->
+    <TextView
+        android:id="@+id/repoReadmeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="README content will be displayed here"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repoStats"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

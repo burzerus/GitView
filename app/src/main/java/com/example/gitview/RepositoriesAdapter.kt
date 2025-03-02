@@ -31,6 +31,13 @@ class RepositoriesAdapter(private val onItemClick: (Repository) -> Unit) :
             // Обновление статистики
             binding.repoStats.text = "⭐ ${repository.stargazers_count}   🍴 ${repository.forks_count}   👀 ${repository.watchers_count}"
 
+            // Если контент README.md загружен, показываем его
+            if (!repository.readmeContent.isNullOrEmpty()) {
+                binding.repoReadmeContent.text = repository.readmeContent
+            } else {
+                binding.repoReadmeContent.text = "No README available"
+            }
+
             itemView.setOnClickListener {
                 onItemClick(repository)
             }
