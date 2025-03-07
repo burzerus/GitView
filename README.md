@@ -9,7 +9,7 @@ This application allows users to log in via GitHub using an OAuth token. After l
 - Language: Kotlin
 - Network requests: Retrofit
 - OAuth: GitHub API
-- 
+
 ## 🔧 Installation and launch
 ### 1. Cloning a repository
 ```sh
