@@ -27,7 +27,7 @@ dependencies {
 ```
 
 
-###3. Launching the app
+### 3. Launching the app
 Run the project through Android Studio or use Gradle:
 ```sh
 gradlew assembleDebug
