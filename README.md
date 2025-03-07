@@ -1,51 +1,52 @@
 # 🚀 GitView 
 
-## 📌 Описание
-Это приложение позволяет пользователям авторизоваться через GitHub с использованием OAuth-токена. После авторизации пользователи могут просматривать свои репозитории и переходить на их страницы.
+## 📌 Description
 
-## 🛠 Технологии
-- Язык: Kotlin
-- Сетевые запросы: Retrofit
+This application allows users to log in via GitHub using an OAuth token. After logging in, users can view their repositories and navigate to their pages.
+
+## 🛠 Technologies
+
+- Language: Kotlin
+- Network requests: Retrofit
 - OAuth: GitHub API
-
-## 🔧 Установка и запуск
-### 1. Клонирование репозитория
+- 
+## 🔧 Installation and launch
+### 1. Cloning a repository
 ```sh
 git clone https://github.com/burzerus/GitView
 cd GitView
 ```
 
-### 2. Установка зависимостей
-Добавьте в `build.gradle`:
+### 2. Installing dependencies
+Add it to the `build.gradle`:
 ```gradle
 dependencies {
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+ implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+ implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 }
 ```
 
 
-
-### 3. Запуск приложения
-Запустите проект через Android Studio или используйте Gradle:
+###3. Launching the app
+Run the project through Android Studio or use Gradle:
 ```sh
 gradlew assembleDebug
 ```
 
-## 🔑 Авторизация через GitHub
-1. Пользователь должен создать токен авторизации .
-2. Ввести в access personal token -> token.
-3. После успешного входа приложение получает репозитории пользователя.
-4. Токен используется для выполнения API-запросов к GitHub.
+# Authorization via GitHub
+1. The user must create an authorization token.
+2. Enter the personal token -> token in access.
+3. After successful login, the application receives the user's repositories.
+4. The token is used to make API requests to GitHub.
 
-## 📄 API Маршруты
-- `GET /user/repos` — список репозиториев пользователя
-- `GET /repos/{owner}/{repo}` — информация о репозитории
+## 📄 API Routes
+- `GET /user/repos` — list of user repositories
+- `GET /repos/{owner}/{repo}` — information about the repository
 
-## 📌 Лицензия
-Этот проект распространяется под лицензией MIT. Подробности в файле [LICENSE](LICENSE).
+## 📌 License
+This project is distributed under the MIT license. The details are in the [LICENSE](LICENSE) file.
 
 ---
-✉️ Автор проекта: [burzerus]
+✉️ Project author: burzerus
 
 
